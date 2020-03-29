@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/wordies/static/css/main.fa6d27bd.chunk.css",
+    "main.js": "/wordies/static/js/main.98698dd0.chunk.js",
+    "main.js.map": "/wordies/static/js/main.98698dd0.chunk.js.map",
+    "runtime-main.js": "/wordies/static/js/runtime-main.9152eb6a.js",
+    "runtime-main.js.map": "/wordies/static/js/runtime-main.9152eb6a.js.map",
+    "static/js/2.7967d98c.chunk.js": "/wordies/static/js/2.7967d98c.chunk.js",
+    "static/js/2.7967d98c.chunk.js.map": "/wordies/static/js/2.7967d98c.chunk.js.map",
+    "index.html": "/wordies/index.html",
+    "precache-manifest.b670f547d2dadb74b46356d48005557a.js": "/wordies/precache-manifest.b670f547d2dadb74b46356d48005557a.js",
+    "service-worker.js": "/wordies/service-worker.js",
+    "static/css/main.fa6d27bd.chunk.css.map": "/wordies/static/css/main.fa6d27bd.chunk.css.map",
+    "static/js/2.7967d98c.chunk.js.LICENSE.txt": "/wordies/static/js/2.7967d98c.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/wordies/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9152eb6a.js",
+    "static/js/2.7967d98c.chunk.js",
+    "static/css/main.fa6d27bd.chunk.css",
+    "static/js/main.98698dd0.chunk.js"
+  ]
+}
