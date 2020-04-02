@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98dbc119b4d6c132a14d49d8090922e3",
+    "revision": "9a29120ee70f8a53dd364d2cd286e0e6",
     "url": "/wordies/index.html"
   },
   {
-    "revision": "1dbafc1d7b354c39c317",
-    "url": "/wordies/static/css/main.fa6d27bd.chunk.css"
+    "revision": "3833b3afb8dcdea349ca",
+    "url": "/wordies/static/css/main.f1412926.chunk.css"
   },
   {
     "revision": "3c8d8d7bd6fc561799b9",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wordies/static/js/2.7967d98c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1dbafc1d7b354c39c317",
-    "url": "/wordies/static/js/main.98698dd0.chunk.js"
+    "revision": "3833b3afb8dcdea349ca",
+    "url": "/wordies/static/js/main.624d3fd0.chunk.js"
   },
   {
     "revision": "ded3393907024d8a56cf",
