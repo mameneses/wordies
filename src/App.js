@@ -7,7 +7,11 @@ class WordiesContainer extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      board:[]
+      board:{
+        board:[],
+        starterColor:""
+      },
+      showAnswers:false,
     }
     this.words = [
       "Acne",
@@ -686,12 +690,48 @@ class WordiesContainer extends React.Component {
     ]
   }
   componentDidMount() {
+    let localBoard = window.localStorage.getItem("board")
+    if(localBoard) {
+      let board = JSON.parse(localBoard)
+      this.setState({
+        board
+      })
+      return
+    }
     let board = this.buildBoard()
+    this.setBoardToLocalStorage(board)
     this.setState({
       board
     })
   }
+  createAnswers(){
+    let i = 0
+    let answers = ["death"]
+    while (i < 8) {
+      answers.push("red")
+      answers.push("blue")
+      if(i < 7){
+        answers.push("neutral")
+      }
+      i++
+    }
+    let decider = Math.floor(Math.random() * 10)
+    let starterColor = ""
+    if(decider < 6){
+      starterColor = "blue"
+    } else {
+      starterColor = "red"
+    }
+    answers.push(starterColor)
+    return {
+      answers,
+      starterColor
+    }
+  }
   shuffle(array, n) {
+    if(!n) {
+      n = array.length
+    }
     // Shuffle array
     const shuffled = array.sort(() => 0.5 - Math.random());
     // Get sub-array of first n elements after shuffled
@@ -699,52 +739,68 @@ class WordiesContainer extends React.Component {
     return selected
   }
   buildBoard(){
-    let board = this.shuffle(this.words, 25).map((word)=>{
+    let {starterColor, answers} = this.createAnswers()
+    let answersKeys = this.shuffle(answers)
+    let board = this.shuffle(this.words, 25).map((word,i)=>{
       return {
         word,
-        value:""
+        value:"",
+        answer:answersKeys[i],
       }
     })
-    return board
+    return {
+      board,
+      starterColor
+    }
   }
   newBoard(){
     let board = this.buildBoard()
     this.setState({
       board
     })
+    this.setBoardToLocalStorage(board)
   }
-  handleWordClick(index, value){
+  handleWordClick(index){
     let board = this.state.board
-    if(board[index]["value"] === value) {
-      board[index]["value"] = ""
-    } else {
-      board[index]["value"] = value
-    }
+    board.board[index]["value"] = board.board[index]["answer"]
     this.setState({
       board
     })
+    this.setBoardToLocalStorage(board)
+  }
+  seeAnswers(){
+    this.setState({
+      showAnswers: !this.state.showAnswers
+    })
+  }
+  setBoardToLocalStorage(board){
+    window.localStorage.setItem("board",JSON.stringify(board))
   }
   render(){
     return (
       <div className="App">
+        <div className="title">
+          <span className={`title-color ${this.state.board.starterColor}`}>{this.state.board.starterColor}</span> goes first
+        </div>
         <div className="words-container">
           {
-          this.state.board.map((word, i)=>{
+          this.state.board.board.map((word, i)=>{
             return(
-              <div key={word.word} className={`word ${word.value} ${word.value ? "selected": ""}`}>
+              <div key={word.word} className={`word ${word.value} ${word.value || this.state.showAnswers ? "selected": ""} ${this.state.showAnswers ? word.answer : ""}`} onClick={this.handleWordClick.bind(this,i)} >
                 {word.word}
-                <div className="values-container">
-                  <div className="value-select team blue" onClick={this.handleWordClick.bind(this,i,"blue")}></div>
-                  <div className="value-select team red" onClick={this.handleWordClick.bind(this,i,"red")}></div>
-                  <div className="value-select team neutral" onClick={this.handleWordClick.bind(this,i,"neutral")}></div>
-                  <div className="value-select team death" onClick={this.handleWordClick.bind(this,i,"death")}></div>
-                </div>
               </div>
             )
           })
           }
         </div>
-        <div className="new-board" onClick={this.newBoard.bind(this)}> New Board</div>
+        <div className="bottom-holder">
+          <div className="bottom-button new-board" onClick={this.newBoard.bind(this)}>
+            New Board
+          </div>
+          <div className="bottom-button see-answers" onClick={this.seeAnswers.bind(this)}>
+            {this.state.showAnswers ? "Hide answers": "See answers"}
+          </div>
+        </div>
       </div>
     )
   }
