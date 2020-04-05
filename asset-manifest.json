@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/wordies/static/css/main.275b0080.chunk.css",
-    "main.js": "/wordies/static/js/main.85ee4530.chunk.js",
-    "main.js.map": "/wordies/static/js/main.85ee4530.chunk.js.map",
+    "main.js": "/wordies/static/js/main.0fd65524.chunk.js",
+    "main.js.map": "/wordies/static/js/main.0fd65524.chunk.js.map",
     "runtime-main.js": "/wordies/static/js/runtime-main.9152eb6a.js",
     "runtime-main.js.map": "/wordies/static/js/runtime-main.9152eb6a.js.map",
-    "static/js/2.d4579bab.chunk.js": "/wordies/static/js/2.d4579bab.chunk.js",
-    "static/js/2.d4579bab.chunk.js.map": "/wordies/static/js/2.d4579bab.chunk.js.map",
+    "static/js/2.5f21f4b7.chunk.js": "/wordies/static/js/2.5f21f4b7.chunk.js",
+    "static/js/2.5f21f4b7.chunk.js.map": "/wordies/static/js/2.5f21f4b7.chunk.js.map",
     "index.html": "/wordies/index.html",
-    "precache-manifest.d9f37841e7f509db9920ed78b16f4c79.js": "/wordies/precache-manifest.d9f37841e7f509db9920ed78b16f4c79.js",
+    "precache-manifest.5054654c82fcb493544154b77924a890.js": "/wordies/precache-manifest.5054654c82fcb493544154b77924a890.js",
     "service-worker.js": "/wordies/service-worker.js",
     "static/css/main.275b0080.chunk.css.map": "/wordies/static/css/main.275b0080.chunk.css.map",
-    "static/js/2.d4579bab.chunk.js.LICENSE.txt": "/wordies/static/js/2.d4579bab.chunk.js.LICENSE.txt"
+    "static/js/2.5f21f4b7.chunk.js.LICENSE.txt": "/wordies/static/js/2.5f21f4b7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9152eb6a.js",
-    "static/js/2.d4579bab.chunk.js",
+    "static/js/2.5f21f4b7.chunk.js",
     "static/css/main.275b0080.chunk.css",
-    "static/js/main.85ee4530.chunk.js"
+    "static/js/main.0fd65524.chunk.js"
   ]
 }
