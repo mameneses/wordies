@@ -1,0 +1,33 @@
+.send-container {
+  position: fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 300ms;
+}
+.send-container.show {
+  opacity: 1;
+}
+.send-option-container {
+  background: #ffffff;
+  border-radius: 3px;
+  padding: 15px;
+}
+.text-answer{
+  font-size: 20px;
+}
+.text-answer input{
+  padding: 3px 20px;
+  font-size: 20px;
+  width: 140px;
+  margin-top: 10px;
+}
+.text-answer input.email{
+  width: 340px;
+}

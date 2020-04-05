@@ -55,6 +55,9 @@ code {
   text-transform: uppercase;
   background: #ffffff;
 }
+.word:hover{
+  transform: scale(1.1);
+}
 .word:hover .values-container {
   display: inline-block;
 }
@@ -119,21 +122,28 @@ code {
 }
 .bottom-holder {
   width: 100%;
-  display: inline-block;
+  display: flex;
 }
 .bottom-button {
   width: 300px;
   text-align: center;
-  padding: 40px;
   margin:40px auto;
   font-size: 30px;
 }
 .new-board{
-  float: left;
 }
 .see-answers{
-  float: right;
 }
 .bottom-button:hover {
+  cursor: pointer;
+}
+.send {
+  border: solid 1px black;
+  border-radius: 5px;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.clickable:hover {
   cursor: pointer;
 }
