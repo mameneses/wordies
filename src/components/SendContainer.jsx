@@ -70,6 +70,7 @@ class SendContainer extends React.Component {
     return body
   }
   handleContainerClick(e){
+    if(!e){return}
     if(e.target && e.target.className && e.target.className.includes("send-container")){
       this.closeContainer()
     }
