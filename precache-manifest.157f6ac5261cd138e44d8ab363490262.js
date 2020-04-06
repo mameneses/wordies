@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eb286bdc95a2c0f6c6c2f7f20d0c6df2",
+    "revision": "f75699c88ac2bd9f6af72814f58c901e",
     "url": "/wordies/index.html"
   },
   {
-    "revision": "b7fd250f5721256d89bc",
+    "revision": "389f6f29407876c579a8",
     "url": "/wordies/static/css/main.275b0080.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/wordies/static/js/2.d4579bab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b7fd250f5721256d89bc",
-    "url": "/wordies/static/js/main.85ee4530.chunk.js"
+    "revision": "389f6f29407876c579a8",
+    "url": "/wordies/static/js/main.cd20f9a3.chunk.js"
   },
   {
     "revision": "ded3393907024d8a56cf",
